@@ -15,6 +15,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.doaSegue), name: NSNotification.Name(rawValue: "doaSegue"), object: nil)
+
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
         if let scene = GKScene(fileNamed: "GameSAScene") {
@@ -63,11 +65,10 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "showTheLastScreen") {
-            let vc = segue.destination as! MainViewController
-            
-        }
+
+    @objc func doaSegue(){
+        performSegue(withIdentifier: "backSA", sender: self)
+        self.view.removeFromSuperview()
+        self.view = nil
     }
 }

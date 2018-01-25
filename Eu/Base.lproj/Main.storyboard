@@ -22,7 +22,7 @@
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
                     <connections>
-                        <segue destination="spm-CC-pVN" kind="show" id="Kmo-rc-IkU"/>
+                        <segue destination="spm-CC-pVN" kind="show" identifier="backSA" id="Kmo-rc-IkU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>

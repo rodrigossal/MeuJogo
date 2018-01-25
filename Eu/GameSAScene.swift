@@ -45,7 +45,7 @@ class GameSAScene: SKScene {
             hit += 1
         }
         if hit > 20{
-            //performSegue(withIdentifier: "showTheLastScreen", sender: self)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "doaSegue"), object: nil)
         }
     }
     
