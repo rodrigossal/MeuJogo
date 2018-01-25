@@ -23,6 +23,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         item.append(GameType(image: #imageLiteral(resourceName: "Drums")))
         item.append(GameType(image: #imageLiteral(resourceName: "Games")))
         item.append(GameType(image: #imageLiteral(resourceName: "MKT")))
+        print("oiiiii")
     }
     
     required init?(coder aDecoder: NSCoder) {
