@@ -20,9 +20,9 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        item.append(GameType(image: #imageLiteral(resourceName: "Drums")))
+        item.append(GameType(image: #imageLiteral(resourceName: "Music")))
         item.append(GameType(image: #imageLiteral(resourceName: "Games")))
-        item.append(GameType(image: #imageLiteral(resourceName: "MKT")))
+        item.append(GameType(image: #imageLiteral(resourceName: "Social")))
         print("oiiiii")
     }
     
@@ -54,10 +54,10 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         switch indexPath.item {
         case 0:
             performSegue(withIdentifier: "GameSA", sender: self)
-//        case 1:
-//            performSegue(withIdentifier: "milgram", sender: self)
-//        case 2:
-//            performSegue(withIdentifier: "milgram", sender: self)
+        case 1:
+            performSegue(withIdentifier: "GameLL", sender: self)
+        case 2:
+            performSegue(withIdentifier: "GameES", sender: self)
         default: break
             
         }

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="spm-CC-pVN">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Eu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
@@ -29,17 +29,48 @@
             </objects>
             <point key="canvasLocation" x="-78" y="161"/>
         </scene>
+        <!--Game2 View Controller-->
+        <scene sceneID="I03-6a-emb">
+            <objects>
+                <viewController id="UqZ-ps-5AL" customClass="Game2ViewController" customModule="Eu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tpv-w6-3It" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rzM-tF-8wd"/>
+                    </view>
+                    <connections>
+                        <segue destination="spm-CC-pVN" kind="show" identifier="backES" id="zHu-Hr-Dfp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDo-FS-nZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-540" y="1100"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="wJQ-PW-tP3">
             <objects>
                 <viewController id="spm-CC-pVN" customClass="MainViewController" customModule="Eu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UYh-hS-2pw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who am I?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6v-Iq-1nS">
+                                <rect key="frame" x="89" y="35" width="142" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="3GG-mF-iRS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tIT-Il-iSO">
-                                <rect key="frame" x="16" y="89" width="343" height="529"/>
+                                <rect key="frame" x="-5" y="89" width="330" height="479"/>
                                 <color key="backgroundColor" red="1" green="0.98803406953811646" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="330" id="cy7-J8-a3z"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="330" id="iTm-yB-Dbb"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oXC-n7-sor">
                                     <size key="itemSize" width="330" height="170"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -48,18 +79,24 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="uzl-MD-jMM" customClass="MyCollectionViewCell" customModule="Eu" customModuleProvider="target">
-                                        <rect key="frame" x="6.5" y="0.0" width="330" height="170"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="330" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SA" translatesAutoresizingMaskIntoConstraints="NO" id="SmD-gW-beP">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SA" translatesAutoresizingMaskIntoConstraints="NO" id="SmD-gW-beP">
                                                     <rect key="frame" x="0.0" y="0.0" width="330" height="170"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="SmD-gW-beP" secondAttribute="height" multiplier="33:17" id="ELO-7c-rRA"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="SmD-gW-beP" firstAttribute="centerX" secondItem="uzl-MD-jMM" secondAttribute="centerX" id="VKJ-Mx-dMM"/>
+                                            <constraint firstItem="SmD-gW-beP" firstAttribute="centerY" secondItem="uzl-MD-jMM" secondAttribute="centerY" id="sng-Yu-vor"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="imagem" destination="SmD-gW-beP" id="5Su-Rr-Fe9"/>
                                         </connections>
@@ -70,34 +107,31 @@
                                     <outlet property="delegate" destination="spm-CC-pVN" id="jqS-uV-Uuz"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who am I?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6v-Iq-1nS">
-                                <rect key="frame" x="117" y="35" width="142" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="tIT-Il-iSO" firstAttribute="leading" secondItem="UYh-hS-2pw" secondAttribute="leadingMargin" id="EOr-mG-fYL"/>
-                            <constraint firstItem="tIT-Il-iSO" firstAttribute="centerX" secondItem="7cc-Qp-ax9" secondAttribute="centerX" id="QlY-db-DFA"/>
-                            <constraint firstItem="f6v-Iq-1nS" firstAttribute="centerX" secondItem="7cc-Qp-ax9" secondAttribute="centerX" id="bIC-YJ-YAy"/>
-                            <constraint firstItem="f6v-Iq-1nS" firstAttribute="top" secondItem="7cc-Qp-ax9" secondAttribute="top" constant="15" id="ckt-i6-mJe"/>
-                            <constraint firstItem="tIT-Il-iSO" firstAttribute="top" secondItem="f6v-Iq-1nS" secondAttribute="bottom" constant="18" id="fgB-WF-D7i"/>
-                            <constraint firstItem="7cc-Qp-ax9" firstAttribute="bottom" secondItem="tIT-Il-iSO" secondAttribute="bottom" constant="49" id="iam-RX-LL4"/>
+                            <constraint firstItem="tIT-Il-iSO" firstAttribute="centerX" secondItem="7cc-Qp-ax9" secondAttribute="centerX" id="BcH-21-aes"/>
+                            <constraint firstItem="7cc-Qp-ax9" firstAttribute="bottom" secondItem="tIT-Il-iSO" secondAttribute="bottom" id="GUg-tU-Cwo"/>
+                            <constraint firstItem="f6v-Iq-1nS" firstAttribute="top" secondItem="7cc-Qp-ax9" secondAttribute="top" constant="15" id="K3W-Xi-whN"/>
+                            <constraint firstItem="f6v-Iq-1nS" firstAttribute="centerX" secondItem="7cc-Qp-ax9" secondAttribute="centerX" id="MO8-Az-Cqw"/>
+                            <constraint firstItem="tIT-Il-iSO" firstAttribute="top" secondItem="f6v-Iq-1nS" secondAttribute="bottom" constant="18" id="Oug-c1-scb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7cc-Qp-ax9"/>
                     </view>
                     <connections>
                         <segue destination="BV1-FR-VrT" kind="show" identifier="GameSA" id="7sZ-qd-zZo"/>
+                        <segue destination="UqZ-ps-5AL" kind="show" identifier="GameES" id="oin-Ma-RxH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcD-Mo-mrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1223" y="183"/>
+            <point key="canvasLocation" x="-1224.375" y="182.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="SA" width="330" height="170"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="zHu-Hr-Dfp"/>
+    </inferredMetricsTieBreakers>
 </document>

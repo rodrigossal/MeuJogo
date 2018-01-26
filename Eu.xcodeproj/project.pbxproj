@@ -21,6 +21,11 @@
 		F5497AA020190DFB004B678F /* Hihatsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5497A9F20190DFB004B678F /* Hihatsound.mp3 */; };
 		F5497AA220190E01004B678F /* SnareSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5497AA120190E01004B678F /* SnareSound.mp3 */; };
 		F5497AA420190E07004B678F /* KickSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5497AA320190E07004B678F /* KickSound.mp3 */; };
+		F5A6B4DE201B5B2300318C19 /* Game2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A6B4DD201B5B2300318C19 /* Game2ViewController.swift */; };
+		F5A6B4E1201B5B6100318C19 /* GameLLScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A6B4E0201B5B6100318C19 /* GameLLScene.swift */; };
+		F5A6B4E3201B5B8200318C19 /* GameLLScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F5A6B4E2201B5B8200318C19 /* GameLLScene.sks */; };
+		F5A6B4E6201B5BE400318C19 /* GameESScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A6B4E5201B5BE400318C19 /* GameESScene.swift */; };
+		F5A6B4E8201B5BEF00318C19 /* GameESScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F5A6B4E7201B5BEF00318C19 /* GameESScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		F5497A9F20190DFB004B678F /* Hihatsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hihatsound.mp3; sourceTree = "<group>"; };
 		F5497AA120190E01004B678F /* SnareSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SnareSound.mp3; sourceTree = "<group>"; };
 		F5497AA320190E07004B678F /* KickSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = KickSound.mp3; sourceTree = "<group>"; };
+		F5A6B4DD201B5B2300318C19 /* Game2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2ViewController.swift; sourceTree = "<group>"; };
+		F5A6B4E0201B5B6100318C19 /* GameLLScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLLScene.swift; sourceTree = "<group>"; };
+		F5A6B4E2201B5B8200318C19 /* GameLLScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameLLScene.sks; sourceTree = "<group>"; };
+		F5A6B4E5201B5BE400318C19 /* GameESScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameESScene.swift; sourceTree = "<group>"; };
+		F5A6B4E7201B5BEF00318C19 /* GameESScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameESScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +87,10 @@
 			children = (
 				F5497A9C2018EE8C004B678F /* Classes */,
 				F5497A992017A965004B678F /* Views */,
+				F5A6B4DF201B5B2F00318C19 /* Scenes */,
 				F5497A962017A82B004B678F /* CollectionView */,
 				F5497A7E201663EE004B678F /* AppDelegate.swift */,
 				F5497A82201663EE004B678F /* Actions.sks */,
-				F5497A80201663EE004B678F /* GameSAScene.sks */,
-				F5497A84201663EE004B678F /* GameSAScene.swift */,
 				F5497A88201663EF004B678F /* Main.storyboard */,
 				F5497A8B201663EF004B678F /* Assets.xcassets */,
 				F5497A8D201663EF004B678F /* LaunchScreen.storyboard */,
@@ -101,8 +110,9 @@
 		F5497A992017A965004B678F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F5497A86201663EF004B678F /* GameViewController.swift */,
 				F5497A9A2017AA9D004B678F /* MainViewController.swift */,
+				F5497A86201663EF004B678F /* GameViewController.swift */,
+				F5A6B4DD201B5B2300318C19 /* Game2ViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,6 +123,19 @@
 				F5497A9D2018EEA4004B678F /* Gametype.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		F5A6B4DF201B5B2F00318C19 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F5497A80201663EE004B678F /* GameSAScene.sks */,
+				F5497A84201663EE004B678F /* GameSAScene.swift */,
+				F5A6B4E2201B5B8200318C19 /* GameLLScene.sks */,
+				F5A6B4E0201B5B6100318C19 /* GameLLScene.swift */,
+				F5A6B4E7201B5BEF00318C19 /* GameESScene.sks */,
+				F5A6B4E5201B5BE400318C19 /* GameESScene.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +198,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5497A8A201663EF004B678F /* Main.storyboard in Resources */,
+				F5A6B4E3201B5B8200318C19 /* GameLLScene.sks in Resources */,
+				F5A6B4E8201B5BEF00318C19 /* GameESScene.sks in Resources */,
 				F5497A81201663EE004B678F /* GameSAScene.sks in Resources */,
 				F5497A8C201663EF004B678F /* Assets.xcassets in Resources */,
 				F5497AA220190E01004B678F /* SnareSound.mp3 in Resources */,
@@ -196,8 +221,11 @@
 				F5497A9E2018EEA4004B678F /* Gametype.swift in Sources */,
 				F5497A87201663EF004B678F /* GameViewController.swift in Sources */,
 				F5497A982017A84A004B678F /* MyCollectionViewCell.swift in Sources */,
+				F5A6B4E1201B5B6100318C19 /* GameLLScene.swift in Sources */,
+				F5A6B4E6201B5BE400318C19 /* GameESScene.swift in Sources */,
 				F5497A7F201663EE004B678F /* AppDelegate.swift in Sources */,
 				F5497A9B2017AA9D004B678F /* MainViewController.swift in Sources */,
+				F5A6B4DE201B5B2300318C19 /* Game2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
