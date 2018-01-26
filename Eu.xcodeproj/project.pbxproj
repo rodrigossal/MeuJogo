@@ -26,6 +26,7 @@
 		F5A6B4E3201B5B8200318C19 /* GameLLScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F5A6B4E2201B5B8200318C19 /* GameLLScene.sks */; };
 		F5A6B4E6201B5BE400318C19 /* GameESScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A6B4E5201B5BE400318C19 /* GameESScene.swift */; };
 		F5A6B4E8201B5BEF00318C19 /* GameESScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F5A6B4E7201B5BEF00318C19 /* GameESScene.sks */; };
+		F5A6B4EA201BAB6500318C19 /* Game1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A6B4E9201BAB6500318C19 /* Game1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		F5A6B4E2201B5B8200318C19 /* GameLLScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameLLScene.sks; sourceTree = "<group>"; };
 		F5A6B4E5201B5BE400318C19 /* GameESScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameESScene.swift; sourceTree = "<group>"; };
 		F5A6B4E7201B5BEF00318C19 /* GameESScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameESScene.sks; sourceTree = "<group>"; };
+		F5A6B4E9201BAB6500318C19 /* Game1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				F5497A9A2017AA9D004B678F /* MainViewController.swift */,
 				F5497A86201663EF004B678F /* GameViewController.swift */,
+				F5A6B4E9201BAB6500318C19 /* Game1ViewController.swift */,
 				F5A6B4DD201B5B2300318C19 /* Game2ViewController.swift */,
 			);
 			path = Views;
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A6B4EA201BAB6500318C19 /* Game1ViewController.swift in Sources */,
 				F5497A85201663EE004B678F /* GameSAScene.swift in Sources */,
 				F5497A9E2018EEA4004B678F /* Gametype.swift in Sources */,
 				F5497A87201663EF004B678F /* GameViewController.swift in Sources */,

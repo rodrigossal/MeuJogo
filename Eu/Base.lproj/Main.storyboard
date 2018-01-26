@@ -27,7 +27,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78" y="161"/>
+            <point key="canvasLocation" x="-2057" y="1432"/>
+        </scene>
+        <!--Game1 View Controller-->
+        <scene sceneID="H1H-AV-ZwF">
+            <objects>
+                <viewController id="X6L-WE-Ncm" customClass="Game1ViewController" customModule="Eu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="seL-9p-Eva" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1QN-Aq-Rle"/>
+                    </view>
+                    <connections>
+                        <segue destination="spm-CC-pVN" kind="show" identifier="backLL" id="oHi-nH-g57"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wOQ-ww-1rm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1088" y="1430"/>
         </scene>
         <!--Game2 View Controller-->
         <scene sceneID="I03-6a-emb">
@@ -45,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lDo-FS-nZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-540" y="1100"/>
+            <point key="canvasLocation" x="-58" y="1431"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="wJQ-PW-tP3">
@@ -121,6 +139,7 @@
                     <connections>
                         <segue destination="BV1-FR-VrT" kind="show" identifier="GameSA" id="7sZ-qd-zZo"/>
                         <segue destination="UqZ-ps-5AL" kind="show" identifier="GameES" id="oin-Ma-RxH"/>
+                        <segue destination="X6L-WE-Ncm" kind="show" identifier="GameLL" id="yQ0-C4-Rw9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcD-Mo-mrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,6 +151,6 @@
         <image name="SA" width="330" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zHu-Hr-Dfp"/>
+        <segue reference="oHi-nH-g57"/>
     </inferredMetricsTieBreakers>
 </document>
