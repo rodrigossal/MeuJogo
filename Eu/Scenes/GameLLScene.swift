@@ -127,49 +127,55 @@ class GameLLScene: SKScene{
                 londrina.run(goDown)
                 witchCity = 2
             }else if witchCity == 2{
+                cuiaba.zPosition = 10
                 cuiaba.run(goDown)
                 witchCity = 3
             }else if witchCity == 3{
-                curitiba.run(goDown){
-                    
-                }
+                curitiba.zPosition = 11
+                curitiba.run(goDown)
             }
             
             timeCity = currentTime
         }
         
-        if witchEnemies == 1{
-            if cagadas.contains(carro){
-                goToGameScene()
+        if carro.position.x > 0{
+            if witchEnemies == 2{
+                if cagadas.position.y < -368 &&  cagadas.position.y > -880{
+                    print("foi!")
+                    goToGameScene()
+                }
+            }else if witchEnemies == 3{
+                if bullying.position.y < -368 &&  bullying.position.y > -880{
+                    goToGameScene()
+                }
+                
+            }else if witchEnemies == 5{
+                if badcoding.position.y < -368 &&  badcoding.position.y > -880{
+                    goToGameScene()
+                }
+                
+                
             }
-        }else if witchEnemies == 2{
-            if bullying.contains(carro){
-                goToGameScene()
+        }else if carro.position.x < 0{
+            if witchEnemies == 4{
+                if inveja.position.y < -368 &&  inveja.position.y > -880{
+                    goToGameScene()
+                }
+                
+            }else if witchEnemies == 6{
+                if dorgas.position.y < -368 &&  dorgas.position.y > -880{
+                    goToGameScene()
+                }
+                
+                
+            }else if witchEnemies == 7{
+                if semjogar.position.y < -368 &&  semjogar.position.y > -880{
+                    goToGameScene()
+                }
+                
             }
-
-        }else if witchEnemies == 3{
-            if inveja.contains(carro){
-                goToGameScene()
-            }
-
-        }else if witchEnemies == 4{
-            if badcoding.contains(carro){
-                goToGameScene()
-            }
-
-            
-        }else if witchEnemies == 5{
-            if dorgas.contains(carro){
-                goToGameScene()
-            }
-
-            
-        }else if witchEnemies == 6{
-            if semjogar.contains(carro){
-                goToGameScene()
-            }
-            
         }
+       
         
         if Double(timeEnemies+5) < currentTime{
             print("oi")
@@ -203,10 +209,10 @@ class GameLLScene: SKScene{
     }
     
     func goToGameScene(){
-        if let scene = GKScene(fileNamed: "GameESScene") {
+        if let scene = GKScene(fileNamed: "GameLLScene") {
             
             // Get the SKScene from the loaded GKScene
-            if let sceneNode = scene.rootNode as! GameESScene? {
+            if let sceneNode = scene.rootNode as! GameLLScene? {
                 
                 
                 // Set the scale mode to scale to fit the window
