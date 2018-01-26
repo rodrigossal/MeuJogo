@@ -6,4 +6,10 @@
 //  Copyright © 2018 Rodrigo Salles Stefani. All rights reserved.
 //
 
-import Foundation
+import SpriteKit
+import GameplayKit
+
+
+class GameLLScene: SKScene{
+    
+}

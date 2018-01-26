@@ -123,8 +123,8 @@ class GameESScene: SKScene{
                 if ((spam.position.y < -(self.size.height/2) && spam.name != "amor.png") || (spam.contains((spaceShip?.position)!) && spam.name != "amor.png"))
                 {
                     isTheEnd = true
-                    //loseTime(time: 0.1)
                     spam.run(SKAction.sequence([SKAction.scale(by: 0.1, duration: 0.1), SKAction.removeFromParent()]))
+                    goToGameScene()
                     
                 }
             }
@@ -144,7 +144,7 @@ class GameESScene: SKScene{
                     {
                         if pop.name == "amor.png"
                         {
-                            //lose
+                            goToGameScene()
                             isTheEnd = true
                             return
                         }
@@ -158,7 +158,9 @@ class GameESScene: SKScene{
                         
                         if enemiesDown >= 4
                         {
-                           // winTime(time: 0.1)
+                            //mudar ES
+                            salles[2] = 1
+                            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "doaSegue"), object: nil)
                             isTheEnd = true
                             return
                         }
@@ -175,9 +177,29 @@ class GameESScene: SKScene{
     }
     
     func goToGameScene(){
-        let gameScene:GameScene = GameScene(size: self.view!.bounds.size) // create your new scene
-        let transition = SKTransition.fadeWithDuration(1.0) // create type of transition (you can check in documentation for more transtions)
-        gameScene.scaleMode = SKSceneScaleMode.Fill
-        self.view!.presentScene(gameScene, transition: transition)
+        if let scene = GKScene(fileNamed: "GameESScene") {
+            
+            // Get the SKScene from the loaded GKScene
+            if let sceneNode = scene.rootNode as! GameESScene? {
+                
+                
+                // Set the scale mode to scale to fit the window
+                sceneNode.scaleMode = .aspectFill
+                
+                
+                // Present the scene
+                if let view = self.view as! SKView? {
+                    
+                    //scene.userData?.setObject(self, forKey: "wholeGameViewController" as NSCopying)
+                    
+                    view.presentScene(sceneNode)
+                    
+                    view.ignoresSiblingOrder = true
+                    
+                    view.showsFPS = true
+                    view.showsNodeCount = true
+                }
+            }
+        }
     }
 }

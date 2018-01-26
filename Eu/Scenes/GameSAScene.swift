@@ -45,6 +45,8 @@ class GameSAScene: SKScene {
             hit += 1
         }
         if hit > 20{
+            //mudar SA
+            salles[0] = 1
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "doaSegue"), object: nil)
         }
     }

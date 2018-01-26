@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+var salles = [0,0,0]
+
 class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     let reuseIdentifier = "cell"
@@ -20,9 +22,21 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        item.append(GameType(image: #imageLiteral(resourceName: "Music")))
-        item.append(GameType(image: #imageLiteral(resourceName: "Games")))
-        item.append(GameType(image: #imageLiteral(resourceName: "Social")))
+        if salles[0] == 0{
+            item.append(GameType(image: #imageLiteral(resourceName: "Music")))
+        }else{
+            item.append(GameType(image: #imageLiteral(resourceName: "SA")))
+        }
+        if salles[1] == 0{
+            item.append(GameType(image: #imageLiteral(resourceName: "Games")))
+        }else{
+            item.append(GameType(image: #imageLiteral(resourceName: "LL")))
+        }
+        if salles[2] == 0{
+            item.append(GameType(image: #imageLiteral(resourceName: "Social")))
+        }else{
+            item.append(GameType(image: #imageLiteral(resourceName: "ES")))
+        }
         print("oiiiii")
     }
     
